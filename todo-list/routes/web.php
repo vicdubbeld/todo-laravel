@@ -1,12 +1,10 @@
 <?php
 
-Route::get('/todos', function () {
-    return view('todos.index');
-});
+Route::get('/todos', 'TodoController@index');
 
-Route::get('/todos/create', function () {
-    return view('todos.create');
-});
+Route::get('/todos/create', 'TodoController@create');
+
+Route::get('/todos/edit', 'TodoController@edit');
 
 /*
 |--------------------------------------------------------------------------
